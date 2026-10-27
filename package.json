@@ -1,0 +1,14 @@
+{
+  "name": "pilipili-backend-mock",
+  "version": "0.1.0",
+  "private": true,
+  "description": "零依赖 Node HTTP Mock 服务，镜像 pilipili 前端 UI 复刻项目的 API 契约（CustomResponse）。不依赖 Spring Boot / MySQL / Redis / SQL。",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
