@@ -7,7 +7,9 @@ const { ok } = require('./src/response')
 const routeModules = [
     require('./src/routes/core'),
     require('./src/routes/search'),
-    require('./src/routes/user')
+    require('./src/routes/user'),
+    require('./src/routes/account'),
+    require('./src/routes/message')
 ]
 const routes = routeModules.flatMap(m => m.routes)
 
