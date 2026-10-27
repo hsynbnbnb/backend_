@@ -39,3 +39,20 @@ backend_/
 │       └── user.js           # Day8 个人空间
 └── docs/day08.md ... day14.md
 ```
+
+## 路由清单（Day08~Day13 累计）
+
+| 模块 | 文件 | 覆盖接口 |
+|------|------|----------|
+| 核心 | `src/routes/core.js` | 登录/注册/热搜/推荐/详情/弹幕/评论/收藏/互动等 23 个 |
+| 搜索 | `src/routes/search.js` | 热搜词/搜索/计数/词详情/视频/仅过审/用户/新增 |
+| 个人空间 | `src/routes/user.js` | 用户信息/作品数/作品/点赞/收藏 |
+| 账号 | `src/routes/account.js` | 账号信息/密码/设置/头像 |
+| 消息 | `src/routes/message.js` | 消息列表/私聊列表/私聊详情/发送/已读 |
+| 创作中心 | `src/routes/creator.js` | 概览/视频/标签热点/分区/投稿 |
+| 上传 | `src/routes/upload.js` | 分片初始化/上传/合并（内存态，不落盘） |
+| 管理登录 | `src/routes/admin.js` | 登录/个人信息/菜单/仪表盘/登出 |
+| 审核 | `src/routes/review.js` | 审核计数/列表/详情/提交/预览 |
+| 管理表 | `src/routes/admin-manage.js` | 内容/数据/举报/申诉/用户/角色 |
+
+> 任意未实现的 `/api/*` 路径由 `server.js` 兜底返回 `{ code:200, data:null }`，前端切换 Mock 关闭后不会出现 500。
