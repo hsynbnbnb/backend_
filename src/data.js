@@ -123,16 +123,16 @@ const DANMUS = [
 ]
 
 const ROOT_COMMENTS = [
-    { id: 201, vid: 16, uid: 20, rootId: 0, parentId: 0, toUserId: 0, content: '第一次这么早，UP主的更新频率太感人了', love: 128, bad: 0, createTime: '2026-10-18 09:20', isTop: 0, isDeleted: 0, replies: [
+    { id: 201, vid: 16, uid: 20, rootId: 0, parentId: 0, toUserId: 0, content: '第一次这么早，UP主的更新频率太感人了', love: 128, bad: 0, createTime: '2026-10-18 09:20', isTop: 0, isDeleted: 0, count: 2, replies: [
         { id: 301, vid: 16, uid: 25, rootId: 201, parentId: 201, toUserId: 20, content: '毕竟是大厂练习生，效率拉满', love: 12, bad: 0, createTime: '2026-10-18 09:41', isTop: 0, isDeleted: 0 },
         { id: 302, vid: 16, uid: 16, rootId: 201, parentId: 301, toUserId: 25, content: '楼上说笑了，就是肝得比较狠', love: 5, bad: 0, createTime: '2026-10-18 10:02', isTop: 0, isDeleted: 0 }
     ] },
-    { id: 202, vid: 16, uid: 31, rootId: 0, parentId: 0, toUserId: 0, content: '这个播放器的进度条交互做得真细', love: 96, bad: 0, createTime: '2026-10-17 21:15', isTop: 0, isDeleted: 0, replies: [
+    { id: 202, vid: 16, uid: 31, rootId: 0, parentId: 0, toUserId: 0, content: '这个播放器的进度条交互做得真细', love: 96, bad: 0, createTime: '2026-10-17 21:15', isTop: 0, isDeleted: 0, count: 1, replies: [
         { id: 303, vid: 16, uid: 36, rootId: 202, parentId: 202, toUserId: 31, content: 'video.js 那一套也复刻了', love: 8, bad: 0, createTime: '2026-10-17 21:33', isTop: 0, isDeleted: 0 }
     ] },
-    { id: 203, vid: 16, uid: 25, rootId: 0, parentId: 0, toUserId: 0, content: '弹幕字体和透明度都能调，爷青回', love: 77, bad: 0, createTime: '2026-10-16 14:48', isTop: 0, isDeleted: 0, replies: [] },
-    { id: 204, vid: 16, uid: 16, rootId: 0, parentId: 0, toUserId: 0, content: '建议加一个倍速记忆功能', love: 54, bad: 0, createTime: '2026-10-15 19:03', isTop: 0, isDeleted: 0, replies: [] },
-    { id: 205, vid: 16, uid: 36, rootId: 0, parentId: 0, toUserId: 0, content: '从设计稿到组件化的那期也出了', love: 41, bad: 0, createTime: '2026-10-14 11:12', isTop: 0, isDeleted: 0, replies: [] }
+    { id: 203, vid: 16, uid: 25, rootId: 0, parentId: 0, toUserId: 0, content: '弹幕字体和透明度都能调，爷青回', love: 77, bad: 0, createTime: '2026-10-16 14:48', isTop: 0, isDeleted: 0, count: 0, replies: [] },
+    { id: 204, vid: 16, uid: 16, rootId: 0, parentId: 0, toUserId: 0, content: '建议加一个倍速记忆功能', love: 54, bad: 0, createTime: '2026-10-15 19:03', isTop: 0, isDeleted: 0, count: 0, replies: [] },
+    { id: 205, vid: 16, uid: 36, rootId: 0, parentId: 0, toUserId: 0, content: '从设计稿到组件化的那期也出了', love: 41, bad: 0, createTime: '2026-10-14 11:12', isTop: 0, isDeleted: 0, count: 0, replies: [] }
 ]
 
 function userById(uid) {

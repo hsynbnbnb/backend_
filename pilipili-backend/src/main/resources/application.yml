@@ -1,0 +1,57 @@
+server:
+  port: ${PILIPILI_PORT:9090}
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: pilipili-backend
+  datasource:
+    url: ${PILIPILI_DB_URL:jdbc:mysql://localhost:3306/pilipili?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true}
+    username: ${PILIPILI_DB_USER:root}
+    password: ${PILIPILI_DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 10000
+  sql:
+    init:
+      mode: always
+      # 显式指定 UTF-8，避免 Windows 中文环境按 GBK 解码 data.sql 造成中文乱码 / 重复插入
+      encoding: UTF-8
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+      continue-on-error: false
+      separator: ;
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+pilipili:
+  cors:
+    allowed-origins: ${PILIPILI_CORS_ORIGINS:http://localhost:8787,http://localhost:8788,http://localhost:5173,http://localhost:4173}
+  jwt:
+    secret: ${PILIPILI_JWT_SECRET:pilipili-dev-only-change-me-in-production}
+    issuer: pilipili-backend
+    ttl-seconds: 7200
+
+logging:
+  level:
+    root: INFO
+    com.pilipili.backend: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"

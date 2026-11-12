@@ -139,10 +139,13 @@ const routes = [
                 toUser: toUserId ? data.userById(toUserId) : null
             }
             if (rootId === 0) {
-                data.ROOT_COMMENTS.unshift({ ...newComment, replies: [] })
+                data.ROOT_COMMENTS.unshift({ ...newComment, count: 0, replies: [] })
             } else {
                 const root = data.ROOT_COMMENTS.find(c => c.id === rootId)
-                if (root) root.replies.push(newComment)
+                if (root) {
+                    root.replies.push(newComment)
+                    root.count = root.replies.length
+                }
             }
             return ok(newComment, '评论成功')
         }
